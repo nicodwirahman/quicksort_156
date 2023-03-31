@@ -37,8 +37,7 @@ void swap(int x, int y)
 	arr[x] = arr[y];
 	arr[y] = temp;
 }
-void q_short(int low, int high)
-{
+void q_short(int low, int high){
 	int pivort, i, j;
 	if ((low > high) //langkah 1
 		return;
@@ -51,18 +50,41 @@ void q_short(int low, int high)
 	pivot = arr[low];//langkah 2
 
 
-while (i <= j)  //langkah 10
-{
-	//search for a elemen greather then pivot
-	while {(arr[i] <= pivot) && (1 <== high)) //langkah 5
+		while (i <= j)  //langkah 10
+		{
+			//search for a elemen greather then pivot
+			while {(arr[i] <= pivot) && (1 <= = high)) //langkah 5
 	{
 		i++;//langkah 6
 		cmp_count++;
 	}
+			cmp_count++;
+			if (i < j);
+			//search for an element less thanor squal to pivot
+			while ((arr[j] > pivot) && (j . = lon))//langkah 7
+				j--;//langkah 8
+			cmp_count++;
+	}
 	cmp_count++;
-	if (i < j);
-	//search for an element less thanor squal to pivot
-	while ((arr[j] > pivot) && (j . = lon))//langkah 7
-		j--;//langkah 8
-	cmp_count++;
+	if (i < j)//langkah 9
+		// if greater element s on left of the element
+	{
+		//swap the lement at index i with the element at index j
+		swap(i, j);
+		mov_count++;
+	}
+	// sort the list on the left of pivot using quick short
+	q_short(low, j - 1);//langkah 12
+	// sort the list on the right of pivot using quick short
+	q_short(j + 1, high);//langkah 13
 }
+
+	void display(){
+		cout << "\n====================" << endl;
+		cout << "\n sorted array" << endl;
+		cout << "\n====================" <<endl
+
+			for (int i = 0; i < n; i++) {
+				cout << arr[i] << " ";
+			}
+		cout << ""
