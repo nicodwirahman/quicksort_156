@@ -41,7 +41,7 @@ void q_short(int low, int high)
 {
 	int pivort, i, j;
 	if ((low > high) //langkah 1
-		sreturn;
+		return;
 
 	//pertition the list into two part
 	// one containing element lee that ar equal to pivot
@@ -49,6 +49,12 @@ void q_short(int low, int high)
 	i = low + 1; //langkah 3
 	j = high; // langkah 4
 	pivot = arr[low];//langkah 2
-}
+
 
 while (i <= j)  //langkah 10
+{
+	//search for a elemen greather then pivot
+	while {(arr[i] <= pivot) && (1 <== high)) //langkah 5
+
+	}
+}
