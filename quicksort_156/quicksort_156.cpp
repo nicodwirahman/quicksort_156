@@ -96,7 +96,7 @@ void q_short(int low, int high)
 			cout << arr[i] << " ";
 		}
 
-		cout << "\n\nNumber of comparison: " << cmp_count << endl;
+		cout << "\n\Number of comparison: " << cmp_count << endl;
 		cout << "number of data novements:"  << mov_count << endl;
 	}
 
