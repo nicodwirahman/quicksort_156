@@ -9,7 +9,7 @@ int n;
 void input() {
 	while (true)
 	{
-		cout << "massukan panjang element array: ";
+	cout << "massukan panjang element array: ";
 			cin >> n;
 
 		if (n <= 20)
@@ -40,67 +40,72 @@ void swap(int x, int y)
 }
 void q_short(int low, int high)
 {
-	int pivort, i, j;
+	int pivot, i, j;
 	if (low > high) //langkah 1
 		return;
 
 	//pertition the list into two part
 	// one containing element lee that ar equal to pivot
 	// outher containing elemnt grenthe than pivot
+
+	 pivot= arr[low];//langkah 2
+	
 	i = low + 1; //langkah 3
 	j = high; // langkah 4
-	pivot = arr[low];//langkah 2
+	
 
 
-		while (i <= j)  //langkah 10
+	while (i <= j)  //langkah 10
+	{
+		//search for a elemen greather then pivot
+		while ((arr[i] <= pivot) && (i <= high)) //langkah 5
 		{
-			//search for a elemen greather then pivot
-			while ({(arr[i] <= pivot) && (1 <= = high)) //langkah 5
-	{
-		i++;//langkah 6
+			i++;//langkah 6
+			cmp_count++;
+		}
 		cmp_count++;
-	}
+		if (i < j);
+		//search for an element less thanor squal to pivot
+		while ((arr[j] > pivot) && (j >= low))//langkah 7
+		{
+			j--;//langkah 8
 			cmp_count++;
-			if (i < j);
-			//search for an element less thanor squal to pivot
-			while ((arr[j] > pivot) && (j . = lon))//langkah 7
-				j--;//langkah 8
-			cmp_count++;
+		}
+		cmp_count++;
+		if (i < j)//langkah 9
+			// if greater element s on left of the element
+		{
+			//swap the lement at index i with the element at index j
+			swap(i, j);
+			mov_count++;
+		}
 	}
-	cmp_count++;
-	if (i < j)//langkah 9
-		// if greater element s on left of the element
-	{
-		//swap the lement at index i with the element at index j
-		swap(i, j);
-		mov_count++;
+		// sort the list on the left of pivot using quick short
+		q_short(low, j - 1);//langkah 12
+		// sort the list on the right of pivot using quick short
+		q_short(j + 1, high);//langkah 13
 	}
-	// sort the list on the left of pivot using quick short
-	q_short(low, j - 1);//langkah 12
-	// sort the list on the right of pivot using quick short
-	q_short(j + 1, high);//langkah 13
 
-		
-
-	void display() {
+	void display () {
 		cout << "\n====================" << endl;
-		cout << "\n sorted array" << endl;
+		cout << "Sorted Array" << endl;
 		cout << "\n====================" << endl;
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) 
+		{
 			cout << arr[i] << " ";
 		}
 
-		cout << "\n\number of comparison: " << cmp_count << endl;
-		cout << "number of data novement:"  << mov_count << endl;
+		cout << "\n\nNumber of comparison: " << cmp_count << endl;
+		cout << "number of data novements:"  << mov_count << endl;
 	}
 
-	int main() 
+	int main()
 	{
 		input();
 		q_short(0, n - 1);
-		display();
+		display;
 		system("pause");
 
 		return 0;
-	{
+	}
