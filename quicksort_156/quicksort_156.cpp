@@ -64,7 +64,7 @@ void q_short(int low, int high)
 			cmp_count++;
 		}
 		cmp_count++;
-		if (i < j);
+		if (i < j)
 		//search for an element less thanor squal to pivot
 		while ((arr[j] > pivot) && (j >= low))//langkah 7
 		{
@@ -96,7 +96,7 @@ void q_short(int low, int high)
 			cout << arr[i] << " ";
 		}
 
-		cout << "\n\Number of comparison: " << cmp_count << endl;
+		cout << "\n\nnumber of comparison: " << cmp_count << endl;
 		cout << "number of data novements:"  << mov_count << endl;
 	}
 
@@ -104,8 +104,8 @@ void q_short(int low, int high)
 	{
 		input();
 		q_short(0, n - 1);
-		display;
-		system("pause");
+		display();
+			system("pause");
 
 		return 0;
 	}
