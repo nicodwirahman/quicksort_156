@@ -25,7 +25,7 @@ void input() {
 
 	for (int i = 0; i < n; i++)
 	{
-		cout << "<" << (i + i);
+		cout << "<" << (i + i) << ">";
 			cin >> arr[i];
 	}
 }
@@ -33,13 +33,15 @@ void input() {
 void swap(int x, int y)
 {
 	int temp;
+
 	temp = arr[x];
 	arr[x] = arr[y];
 	arr[y] = temp;
 }
-void q_short(int low, int high){
+void q_short(int low, int high)
+{
 	int pivort, i, j;
-	if ((low > high) //langkah 1
+	if (low > high) //langkah 1
 		return;
 
 	//pertition the list into two part
@@ -53,7 +55,7 @@ void q_short(int low, int high){
 		while (i <= j)  //langkah 10
 		{
 			//search for a elemen greather then pivot
-			while {(arr[i] <= pivot) && (1 <= = high)) //langkah 5
+			while ({(arr[i] <= pivot) && (1 <= = high)) //langkah 5
 	{
 		i++;//langkah 6
 		cmp_count++;
@@ -77,14 +79,28 @@ void q_short(int low, int high){
 	q_short(low, j - 1);//langkah 12
 	// sort the list on the right of pivot using quick short
 	q_short(j + 1, high);//langkah 13
-}
 
-	void display(){
+		
+
+	void display() {
 		cout << "\n====================" << endl;
 		cout << "\n sorted array" << endl;
 		cout << "\n====================" << endl;
 
-			for (int i = 0; i < n; i++) {
-				cout << arr[i] << " ";
-			}
-		cout << ""
+		for (int i = 0; i < n; i++) {
+			cout << arr[i] << " ";
+		}
+
+		cout << "\n\number of comparison: " << cmp_count << endl;
+		cout << "number of data novement:"  << mov_count << endl;
+	}
+
+	int main() 
+	{
+		input();
+		q_short(0, n - 1);
+		display();
+		system("pause");
+
+		return 0;
+	{
