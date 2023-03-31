@@ -55,6 +55,14 @@ while (i <= j)  //langkah 10
 {
 	//search for a elemen greather then pivot
 	while {(arr[i] <= pivot) && (1 <== high)) //langkah 5
-
+	{
+		i++;//langkah 6
+		cmp_count++;
 	}
+	cmp_count++;
+	if (i < j);
+	//search for an element less thanor squal to pivot
+	while ((arr[j] > pivot) && (j . = lon))//langkah 7
+		j--;//langkah 8
+	cmp_count++;
 }
