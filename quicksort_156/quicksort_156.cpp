@@ -10,14 +10,14 @@ void input() {
 	while (true)
 	{
 		cout << "massukan panjang element array: ";
-			cin >> ;
+			cin >> n;
 
 		if (n <= 20)
 			break;
 		else
 			cout << "\n maksimum panjang array adalah 20" << endl;
 	}
-}
+
 
 	cout << "\n===================" << endl;
 	cout << "\nenter array element" << endl;
@@ -25,7 +25,7 @@ void input() {
 
 	for (int i = 0; i < n; i++)
 	{
-		cout << "<" << (i + i)
+		cout << "<" << (i + i);
 			cin >> arr[i];
 	}
 }
@@ -36,4 +36,17 @@ void swap(int x, int y)
 	temp = arr[x];
 	arr[x] = arr[y];
 	arr[y] = temp;
+}
+void q_short(int low, int high)
+{
+	int pivort, i, j;
+	if ((low > high) //langkah 1
+		sreturn;
+
+	//pertition the list into two part
+	// one containing element lee that ar equal to pivot
+	// outher containing elemnt grenthe than pivot
+	i = low + 1; //langkah 3
+	j = high; // langkah 4
+	pivot = arr[low];//langkah 2
 }
